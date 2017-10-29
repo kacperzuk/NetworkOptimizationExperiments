@@ -35,7 +35,10 @@ def solve(network_file, link_capacity):
             j += 1
             if vi == vj:
                 continue
-            demands.append((vi, vj, abs(i-j) * 2))
+            d = abs(i-j) * 2
+            if d > link_capacity:
+                raise Exception("Demand is greater than link_capacity, problem unsolvable: %d > %d" % (d, link_capacity))
+            demands.append((vi, vj, d))
 
     return graph, demands
 
