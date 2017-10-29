@@ -6,8 +6,6 @@ tree = ET.parse('networks/atlanta.xml')
 root = tree.getroot()
 graph = nx.DiGraph()
 
-print(tree)
-
 for node in root.iter('{http://sndlib.zib.de/network}node'):
   graph.add_node(node.attrib['id'], x = node[0][0].text, y = node[0][1].text)
 
@@ -17,5 +15,4 @@ for link in root.iter('{http://sndlib.zib.de/network}link'):
 
 
 nx.draw(graph, pos=nx.spring_layout(graph),with_labels = True)
-
 plt.show()
