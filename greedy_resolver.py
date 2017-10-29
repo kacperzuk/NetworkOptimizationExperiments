@@ -19,11 +19,11 @@ def solve(network_file, link_capacity):
     for link in root.iter('{http://sndlib.zib.de/network}link'):
         graph.add_edge(link[0].text,link[1].text,
                 id=link.attrib['id'],
-                capacity=link_capacity,
+                capacity_left=link_capacity,
                 cost=0)
         graph.add_edge(link[1].text,link[0].text,
                 id=link.attrib['id'],
-                capacity=link_capacity,
+                capacity_left=link_capacity,
                 cost=0)
 
     demands = []
@@ -52,7 +52,7 @@ if __name__ == "__main__":
 
         edges_to_remove = []
         for v1, v2, attr in tmpgraph.edges(data=True):
-            if attr["capacity"] < d[2]:
+            if attr["capacity_left"] < d[2]:
                 edges_to_remove.append((v1,v2))
         tmpgraph.remove_edges_from(edges_to_remove)
 
@@ -75,12 +75,12 @@ if __name__ == "__main__":
             if not minedge:
                 print("Couldn't find path for demand:", d)
                 raise Exception("Unsolvable with greedy algorithm")
-            graph.add_edge(minedge[0], minedge[1], capacity=int(sys.argv[2]), cost=minedge[2]/2)
-            graph.add_edge(minedge[1], minedge[0], capacity=int(sys.argv[2]), cost=minedge[2]/2)
+            graph.add_edge(minedge[0], minedge[1], capacity_left=int(sys.argv[2]), cost=minedge[2]/2)
+            graph.add_edge(minedge[1], minedge[0], capacity_left=int(sys.argv[2]), cost=minedge[2]/2)
 
         tunnels.append(p)
         for e in nx.utils.pairwise(p):
-            graph.edges[e]["capacity"] -= d[2]
+            graph.edges[e]["capacity_left"] -= d[2]
 
     print("Tunnels")
     pprint(tunnels)
