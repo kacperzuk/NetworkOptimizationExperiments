@@ -10,13 +10,16 @@
   var def = new IloOplModelDefinition(source);
   var opl = new IloOplModel(def,cplex_model);
   var x = 1;
- 	while(x) {
- 		var data = new IloOplDataSource("data/" + 1 + ".dat"); 	
+  var f = new IloOplInputFile("data/paths.txt")
+  var s;
+ 	while(!f.eof) {
+ 		s = f.readline();
+ 		var data = new IloOplDataSource("data/" + s + ".dat"); 	
  		opl.addDataSource(data);
  		opl.generate();
- 		
+ 		writeln("file " + s)
  		if(cplex_model.solve()){
- 			var ofile = new IloOplOutputFile("results/" + 1 + ".txt") 
+ 			var ofile = new IloOplOutputFile("results/" + s + ".txt") 
  			ofile.writeln("Cost:" + cplex_model.getObjValue());
  			ofile.writeln("Nodes:" + opl.Nodes);
  			ofile.writeln("Arcs:" + opl.Arcs);
@@ -33,6 +36,7 @@
  		x -=1; 	
  		data.end();
 	}
+	f.close();
 	opl.end();
 	def.end();
 	cplex_model.end();
