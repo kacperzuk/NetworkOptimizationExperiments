@@ -60,13 +60,14 @@
  			}
  		} 		
  	}
-// 	
- 	forall(e in Arcs) 
- 		sum(d in Demands)x[e][d]*d.volume == y[e];
  	
- 	forall(e in Arcs)
- 	  y[e] <= e.cap*u[e];
- 	 
+ 	forall(e in Arcs){
+ 	 	y[e] <= e.cap*u[e];
+ 	 	if(e.cost == 0)
+ 	 		u[e] == 1;
+ 	 	sum(d in Demands)x[e][d]*d.volume == y[e];
+ 	 		 		
+ 	}	 
  }
  
  execute {

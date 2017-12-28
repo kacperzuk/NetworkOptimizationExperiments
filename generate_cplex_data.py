@@ -61,7 +61,7 @@ def parse_file(filepath,filename, cap_multi):
 
 
 for filename in os.listdir("networks"):
-    parse_file('networks/' + filename, filename, 2)
+    # parse_file('networks/' + filename, filename, 2)
     parse_file('networks/' + filename, filename, 2.5)
     parse_file('networks/' + filename, filename, 3)
 

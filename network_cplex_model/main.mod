@@ -9,15 +9,17 @@
   var cplex_model = new IloCplex();
   var def = new IloOplModelDefinition(source);
   var opl = new IloOplModel(def,cplex_model);
-  var x = 1;
   var f = new IloOplInputFile("data/paths.txt")
   var s;
+   		writeln("start");
+ 
  	while(!f.eof) {
  		s = f.readline();
  		var data = new IloOplDataSource("data/" + s + ".dat"); 	
+ 		writeln("file " + s);
  		opl.addDataSource(data);
  		opl.generate();
- 		writeln("file " + s)
+ 		writeln("solving");
  		if(cplex_model.solve()){
  			var ofile = new IloOplOutputFile("results/" + s + ".txt") 
  			ofile.writeln("Cost:" + cplex_model.getObjValue());
@@ -27,13 +29,16 @@
  			ofile.writeln("xed:" + opl.x);
  			ofile.writeln("ye:" + opl.y);
  			ofile.writeln("ue:" + opl.u);
+ 			for(var e in opl.Arcs){
+ 				if(e.cost != 0 && opl.u[e] != 0)
+ 					ofile.writeln("Buy arc" + e);
+ 					 			
+ 			}
  			ofile.close();
  		 	writeln("Problem solved")
  		} else {
  		 	writeln("Cannot solve problem");
- 		}
- 		
- 		x -=1; 	
+ 		} 	
  		data.end();
 	}
 	f.close();
@@ -41,4 +46,5 @@
 	def.end();
 	cplex_model.end();
 	source.end();
+	   		writeln("stop");
  }
