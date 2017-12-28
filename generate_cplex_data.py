@@ -2,6 +2,7 @@ import xml.etree.ElementTree as ET
 import os
 import math
 import re
+import random
 
 paths = []
 
@@ -32,7 +33,9 @@ def parse_file(filepath,filename, cap_multi):
         for jdx, y in enumerate(nodes):
             if idx != jdx:
                 demands.append({"src": x["name"], "dst" : y["name"], "volume" : abs(idx - jdx) * 2, "backup": 0})
-    
+
+    random_backup(demands)
+
     file = re.sub('\.xml$', '', filename)
     path = "network_cplex_model/data/" + file + "_" + str(cap_multi) + ".dat"
     paths.append(file + "_" + str(cap_multi))
@@ -57,7 +60,14 @@ def parse_file(filepath,filename, cap_multi):
                 f.write("<\""+ d["src"] + "\",\""+ d["dst"] + "\"," + str(d["volume"]) + "," + str(d["backup"]) + ">")
             else:
                 f.write("<\""+ d["src"] + "\",\""+ d["dst"] + "\"," + str(d["volume"]) + "," + str(d["backup"]) + ">, ")
-        f.write("};\n")       
+        f.write("};\n")
+
+def random_backup(demands):
+    for x in range(0, 4):
+        node_id = random.randint(0, len(demands)-1)
+        backup_node = demands[node_id]
+        backup_node['backup'] = 1
+        demands.append(backup_node)
 
 
 for filename in os.listdir("networks"):
