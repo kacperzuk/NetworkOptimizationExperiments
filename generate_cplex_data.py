@@ -37,9 +37,15 @@ def parse_file(filepath,filename, cap_multi):
     random_backup(demands)
 
     file = re.sub('\.xml$', '', filename)
-    path = "network_cplex_model/data/" + file + "_" + str(cap_multi) + ".dat"
+    path = "network_cplex_model/network/data/" + file + "_" + str(cap_multi) + ".dat"
+    path_relaxation = "network_cplex_model/network_relaxation/data/" + file + "_" + str(cap_multi) + ".dat"
     paths.append(file + "_" + str(cap_multi))
-    with open(path,"w") as f :
+    save_to(path,nodes,links,demands)
+    save_to(path_relaxation,nodes,links,demands)
+    
+
+def save_to(filepath,nodes,links,demands):
+    with open(filepath,"w") as f :
         f.write("Nodes = {")
         for idx, n in enumerate(nodes):
             if idx == len(nodes) - 1:
@@ -75,6 +81,17 @@ for filename in os.listdir("networks"):
     parse_file('networks/' + filename, filename, 2.5)
     parse_file('networks/' + filename, filename, 3)
 
-with open("network_cplex_model/data/paths.txt","w") as f:
-    for x in paths:
-        f.write(x + "\n")
+with open("network_cplex_model/network_relaxation/data/paths.txt","w") as f:
+    for idx,x in enumerate(paths):
+        if idx == len(paths) - 1:
+            f.write(x)
+        else:
+            f.write(x + "\n")
+
+
+with open("network_cplex_model/network/data/paths.txt","w") as f:
+    for idx,x in enumerate(paths):
+        if idx == len(paths) - 1:
+            f.write(x)
+        else:
+            f.write(x + "\n")

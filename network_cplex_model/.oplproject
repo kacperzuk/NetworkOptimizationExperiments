@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="ASCII"?><project>
 	<version>1.0</version>
 	<configs>
-		<config default="true" name="Konfiguracja" category="opl">
-			<ref name="main.mod" type="model">
+		<config default="false" name="Konfiguracja" category="opl">
+			<ref name="network/main.mod" type="model">
 			</ref>
-			<ref name="network.ops" type="setting">
+			<ref name="network/network.ops" type="setting">
+			</ref>
+		</config>
+		<config default="true" name="Konfiguracja_relaksacja" category="opl">
+			<ref name="network_relaxation/main_relaxation.mod" type="model">
+			</ref>
+			<ref name="network_relaxation/network_relaxation.ops" type="setting">
 			</ref>
 		</config>
 	</configs>
