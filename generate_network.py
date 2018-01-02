@@ -75,6 +75,8 @@ if __name__ == "__main__":
     filename = sys.argv[3]
 
     G = nx.gnm_random_graph(nodes_number, edges_number, SEED)
+    #G = nx.newman_watts_strogatz_graph(7, 3, 0.2, SEED)
+    #G = nx.connected_watts_strogatz_graph(7, 3, 0.2, 2 , SEED)
 
     for itr in G.nodes():
         G.node[itr]['x'] = round(random.uniform(72, 36), 3) # europe N-S,
@@ -94,9 +96,9 @@ if __name__ == "__main__":
                 try:
                     G[idx][idy]
                     G[idy][idx]
-                    print("Link", idx, idy, "exists")
+                    #print("Link", idx, idy, "exists")
                 except KeyError: # xD
-                    print("add link", idx, idy)
+                    print("Add link", idx, idy)
                     G.add_edge(idx, idy, cap=LINK_CAP, cost=calc_cost(G, idx, idy))
 
     demands = demands_generator(nodes_number)
