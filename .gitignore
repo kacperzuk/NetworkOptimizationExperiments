@@ -27,6 +27,10 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+share/
+bin/
+pyvenv.cfg
+pip-selfcheck.json
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
