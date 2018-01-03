@@ -78,9 +78,9 @@ if __name__ == "__main__":
     edges_number = int(sys.argv[2])
     filename = sys.argv[3]
 
-    #G = nx.gnm_random_graph(nodes_number, edges_number, SEED)
+    G = nx.gnm_random_graph(nodes_number, edges_number, SEED)
     #G = nx.newman_watts_strogatz_graph(10, 3, 0.2, SEED)
-    G = nx.connected_watts_strogatz_graph(7, 3, 0.2, 2 , SEED)
+    #G = nx.connected_watts_strogatz_graph(7, 3, 0.2, 2 , SEED)
 
     for itr in G.nodes():
         G.node[itr]['x'] = round(random.uniform(72, 36), 3) # europe N-S,
