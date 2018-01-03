@@ -29,10 +29,10 @@ def random_backup(demands):
 
 def calc_cost(G, idx, idy):
 
-    A = (G.node[idx]['x'] - G.node[idy]['x']) * (G.node[idx]['x'] - G.node[idy]['x'])
-    B = (G.node[idx]['y'] - G.node[idy]['y']) * (G.node[idx]['y'] - G.node[idy]['y'])
+    A = (G.node[idx]['x'] - G.node[idy]['x'])
+    B = (G.node[idx]['y'] - G.node[idy]['y'])
 
-    return round(math.sqrt(A + B) / 2)
+    return round(math.sqrt(A**2 + B**2)**2 / 2)
 
 def save_to(filename, G, demands):
 
