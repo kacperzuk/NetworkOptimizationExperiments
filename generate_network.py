@@ -50,11 +50,15 @@ def save_to(filename, G, demands):
                 temp += 1
         f.write("};\n")
         f.write("Arcs = {")
+        arc_temp = 0
         for e in G.edges(None, True):
-            if e == len(G.edges()) - 1:
-                f.write("<\""+ str(e[0]) + "\",\""+ str(e[1]) + "\"," + str(e[2]["cap"]) + "," + str(e[2]["cost"]) + ">")
+            if arc_temp == len(G.edges()) - 1:
+                f.write("<\""+ str(e[0]) + "\",\""+ str(e[1]) + "\"," + str(e[2]["cap"]) + "," + str(e[2]["cost"]) + ">, ")
+                f.write("<\""+ str(e[1]) + "\",\""+ str(e[0]) + "\"," + str(e[2]["cap"]) + "," + str(e[2]["cost"]) + ">")
             else:
                 f.write("<\""+ str(e[0]) + "\",\""+ str(e[1]) + "\"," + str(e[2]["cap"]) + "," + str(e[2]["cost"]) + ">, ")
+                f.write("<\""+ str(e[1]) + "\",\""+ str(e[0]) + "\"," + str(e[2]["cap"]) + "," + str(e[2]["cost"]) + ">, ")
+                arc_temp += 1
         f.write("};\n")
         f.write("Demands = {")
         for idx, d in enumerate(demands):
@@ -75,7 +79,7 @@ if __name__ == "__main__":
     filename = sys.argv[3]
 
     G = nx.gnm_random_graph(nodes_number, edges_number, SEED)
-    #G = nx.newman_watts_strogatz_graph(7, 3, 0.2, SEED)
+    #G = nx.newman_watts_strogatz_graph(10, 3, 0.2, SEED)
     #G = nx.connected_watts_strogatz_graph(7, 3, 0.2, 2 , SEED)
 
     for itr in G.nodes():
