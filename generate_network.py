@@ -9,6 +9,8 @@ BACKUP_DEMANDS = 4
 SEED = 1337
 LINK_CAP = 20 # Gbit/s
 
+backup_demands = list()
+
 def demands_generator(nodes_number):
 
     demands = []
@@ -27,6 +29,7 @@ def random_backup(demands):
         backup_node = demands[node_id]
         backup_node['backup'] = 1
         demands.append(backup_node)
+        backup_demands.append(backup_node)
 
 def calc_cost(G, idx, idy):
 
@@ -80,6 +83,7 @@ def save_to_heuristic(filename, G):
     output_data = dict()
     output_data['nodes'] = nodes
     output_data['edges'] = edges
+    output_data['backups'] = backup_demands
 
     filepath = "network_cplex_model/network/data/" + filename + "_hist.dat"
     with open(filepath, "w") as f :
