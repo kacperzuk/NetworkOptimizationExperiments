@@ -11,13 +11,15 @@ def link_cost(v1, v2):
     dy = v1["y"]-v2["y"]
     return math.sqrt(dx*dx + dy*dy)
 
-def load_graph(network_file, link_capacity):
+def load_graph(network_file):
     graph = nx.DiGraph()
     filepath = "network_cplex_model/network/data/" + network_file + "_hist.dat"
     with open(filepath, 'r') as f:
         network_data = json.load(f)
 
         graph = nx.DiGraph()
+
+        link_capacity = network_data['edges'][0][2]['cap']
 
         for node in network_data['nodes']:
             graph.add_node(node[0], x=float(node[1]['x']), y=float(node[1]['y']))
@@ -32,7 +34,7 @@ def load_graph(network_file, link_capacity):
                     capacity_left=link[2]['cap'],
                     cost=0)
 
-    return graph
+    return graph, link_capacity
 
 def calculate_demands(graph, link_capacity):
     demands = []
@@ -154,12 +156,11 @@ def setup_path(existing_edges, graph, src, dst, new_link_capacity):
     return p, edges_to_add
 
 if __name__ == "__main__":
-    if len(sys.argv) < 3 or len(sys.argv) % 2 != 1:
+    if len(sys.argv) < 2:
         print("Usage: greedy_resolver.py network_file.xml link_capacity premium_pairs...")
         print("  - link_capacity is in Gbit/s")
         sys.exit(2)
-    link_capacity = int(sys.argv[2])
-    graph = load_graph(sys.argv[1], link_capacity)
+    graph, link_capacity = load_graph(sys.argv[1])
     demands = calculate_demands(graph, link_capacity)
     premium_pairs = parse_premiums(sys.argv[1])
 
