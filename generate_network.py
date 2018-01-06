@@ -3,6 +3,7 @@ import xml.etree.ElementTree as ET
 import sys
 import random
 import math
+import json
 
 BACKUP_DEMANDS = 4
 SEED = 1337
@@ -68,6 +69,23 @@ def save_to(filename, G, demands):
                 f.write("<\""+ str(d["src"]) + "\",\""+ str(d["dst"]) + "\"," + str(d["volume"]) + "," + str(d["backup"]) + ">, ")
         f.write("};\n")
 
+def save_to_heuristic(filename, G):
+    nodes = list(G.nodes(True));
+    edges = list()
+
+    for e in G.edges(None, True):
+        if e[2]["cost"] == 0:
+            edges.append(e)
+
+    output_data = dict()
+    output_data['nodes'] = nodes
+    output_data['edges'] = edges
+
+    filepath = "network_cplex_model/network/data/" + filename + "_hist.dat"
+    with open(filepath, "w") as f :
+        f.write(json.dumps(output_data))
+        f.close()
+
 if __name__ == "__main__":
     if len(sys.argv) < 4:
         print("Usage: generate_network.py nodes_number edges_number output_file")
@@ -109,3 +127,4 @@ if __name__ == "__main__":
     random_backup(demands)
 
     save_to(filename, G, demands)
+    save_to_heuristic(filename, G)

@@ -14,9 +14,12 @@ def solve(network_file, link_capacity):
     graph = nx.DiGraph()
 
     for node in root.iter('{http://sndlib.zib.de/network}node'):
+        # tutaj maja byc node'y id, x, y 
         graph.add_node(node.attrib['id'], x=float(node[0][0].text), y=float(node[0][1].text))
 
     for link in root.iter('{http://sndlib.zib.de/network}link'):
+        # id src, id dest, capacity - global, albo z obiektu
+        # koszt zerowy
         graph.add_edge(link[0].text,link[1].text,
                 id=link.attrib['id'],
                 capacity_left=link_capacity,
