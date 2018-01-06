@@ -18,7 +18,7 @@ def load_graph(network_file):
         network_data = json.load(f)
 
         graph = nx.DiGraph()
-        
+
         link_capacity = network_data['edges'][0][2]['cap']
 
         for node in network_data['nodes']:
@@ -156,7 +156,7 @@ def setup_path(existing_edges, graph, src, dst, new_link_capacity):
     return p, edges_to_add
 
 if __name__ == "__main__":
-    if len(sys.argv) < 3 or len(sys.argv) % 2 != 1:
+    if len(sys.argv) < 2:
         print("Usage: greedy_resolver.py network_file.xml link_capacity premium_pairs...")
         print("  - link_capacity is in Gbit/s")
         sys.exit(2)
