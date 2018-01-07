@@ -8,8 +8,8 @@ read -n 1 yno
 
 
 if [ "$yno" == "Y" ]; then
-	cp network_cplex_model/network/data/test_hist.dat final_networks/net_$1_$2_$3.json
-	cp network_cplex_model/network/data/test.dat final_networks/net_$1_$2_$3.dat
+	cp network_cplex_model/network/data/temp_hist.dat final_networks/net_$1_$2_$3.json
+	cp network_cplex_model/network/data/temp.dat final_networks/net_$1_$2_$3.dat
 	echo "Copied!."
   	exit 1
 else

@@ -13,7 +13,7 @@ def link_cost(v1, v2):
 
 def load_graph(network_file):
     graph = nx.DiGraph()
-    filepath = "final_networks/" + network_file + ""
+    filepath = "network_cplex_model/network/data/" + network_file + "_hist.dat"
     with open(filepath, 'r') as f:
         network_data = json.load(f)
 
@@ -56,7 +56,7 @@ def calculate_demands(graph, link_capacity):
     return demands
 
 def parse_premiums(network_file):
-    filepath = "final_networks/" + network_file + ""
+    filepath = "network_cplex_model/network/data/" + network_file + "_hist.dat"
     premium_pairs = []
 
     with open(filepath, 'r') as f:
