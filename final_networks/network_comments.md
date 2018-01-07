@@ -25,9 +25,6 @@ net_[nodes]_[edges]_[capacity]
 20 40 150 - duuuzo, cost 219
 20 40 180 - 15 linkow, cost 36
 
-20 60 100 - 10 linkow, cost 54
-20 60 80 - duuuzo, cost 568
-
 30 60 320 - duzo, cost 551
 30 60 350 - duzo, cost 343
 30 60 300 - duzo, cost 767
