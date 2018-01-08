@@ -1,0 +1,165 @@
+Processing demand 1/132             Processing demand 2/132             Processing demand 3/132             Processing demand 4/132             Processing demand 5/132             Processing demand 6/132             Processing demand 7/132             Processing demand 8/132             Processing demand 9/132             Processing demand 10/132             Processing demand 11/132             Processing demand 12/132             Processing demand 13/132             Processing demand 14/132             Processing demand 15/132             Processing demand 16/132             Processing demand 17/132             Processing demand 18/132             Processing demand 19/132             Processing demand 20/132             Processing demand 21/132             Processing demand 22/132             Processing demand 23/132             Processing demand 24/132             Processing demand 25/132             Processing demand 26/132             Processing demand 27/132             Processing demand 28/132             Processing demand 29/132             Processing demand 30/132             Processing demand 31/132             Processing demand 32/132             Processing demand 33/132             Processing demand 34/132             Processing demand 35/132             Processing demand 36/132             Processing demand 37/132             Processing demand 38/132             Processing demand 39/132             Processing demand 40/132             Processing demand 41/132             Processing demand 42/132             Processing demand 43/132             Processing demand 44/132             Processing demand 45/132             Processing demand 46/132             Processing demand 47/132             Processing demand 48/132             Processing demand 49/132             Processing demand 50/132             Processing demand 51/132             Processing demand 52/132             Processing demand 53/132             Processing demand 54/132             Processing demand 55/132             Processing demand 56/132             Processing demand 57/132             Processing demand 58/132             Processing demand 59/132             Processing demand 60/132             Processing demand 61/132             Processing demand 62/132             Processing demand 63/132             Processing demand 64/132             Processing demand 65/132             Processing demand 66/132             Processing demand 67/132             Processing demand 68/132             Processing demand 69/132             Processing demand 70/132             Processing demand 71/132             Processing demand 72/132             Processing demand 73/132             Processing demand 74/132             Processing demand 75/132             Processing demand 76/132             Processing demand 77/132             Processing demand 78/132             Processing demand 79/132             Processing demand 80/132             Processing demand 81/132             Processing demand 82/132             Processing demand 83/132             Processing demand 84/132             Processing demand 85/132             Processing demand 86/132             Processing demand 87/132             Processing demand 88/132             Processing demand 89/132             Processing demand 90/132             Processing demand 91/132             Processing demand 92/132             Processing demand 93/132             Processing demand 94/132             Processing demand 95/132             Processing demand 96/132             Processing demand 97/132             Processing demand 98/132             Processing demand 99/132             Processing demand 100/132             Processing demand 101/132             Processing demand 102/132             Processing demand 103/132             Processing demand 104/132             Processing demand 105/132             Processing demand 106/132             Processing demand 107/132             Processing demand 108/132             Processing demand 109/132             Processing demand 110/132             Processing demand 111/132             Processing demand 112/132             Processing demand 113/132             Processing demand 114/132             Processing demand 115/132             Processing demand 116/132             Processing demand 117/132             Processing demand 118/132             Processing demand 119/132             Processing demand 120/132             Processing demand 121/132             Processing demand 122/132             Processing demand 123/132             Processing demand 124/132             Processing demand 125/132             Processing demand 126/132             Processing demand 127/132             Processing demand 128/132             Processing demand 129/132             Processing demand 130/132             Processing demand 131/132             Processing demand 132/132             
+Tunnels
+[{'backup': False, 'path': [0, 5, 11], 'premium': False},
+ {'backup': False, 'path': [11, 2, 0], 'premium': False},
+ {'backup': False, 'path': [0, 10], 'premium': False},
+ {'backup': False, 'path': [10, 0], 'premium': False},
+ {'backup': False, 'path': [1, 6, 11], 'premium': False},
+ {'backup': False, 'path': [11, 5, 1], 'premium': False},
+ {'backup': False, 'path': [0, 9], 'premium': False},
+ {'backup': False, 'path': [9, 0], 'premium': False},
+ {'backup': False, 'path': [1, 10], 'premium': False},
+ {'backup': False, 'path': [10, 1], 'premium': False},
+ {'backup': False, 'path': [2, 11], 'premium': False},
+ {'backup': False, 'path': [11, 9, 2], 'premium': False},
+ {'backup': False, 'path': [0, 8], 'premium': False},
+ {'backup': False, 'path': [8, 0], 'premium': False},
+ {'backup': False, 'path': [1, 9], 'premium': True},
+ {'backup': True, 'path': [1, 8, 9], 'premium': True},
+ {'backup': False, 'path': [9, 1], 'premium': True},
+ {'backup': True, 'path': [9, 4, 1], 'premium': True},
+ {'backup': False, 'path': [2, 5, 10], 'premium': False},
+ {'backup': False, 'path': [10, 5, 2], 'premium': False},
+ {'backup': False, 'path': [3, 11], 'premium': False},
+ {'backup': False, 'path': [11, 3], 'premium': False},
+ {'backup': False, 'path': [0, 2, 9, 7], 'premium': False},
+ {'backup': False, 'path': [7, 9, 5, 0], 'premium': False},
+ {'backup': False, 'path': [1, 4, 3, 8], 'premium': False},
+ {'backup': False, 'path': [8, 1], 'premium': False},
+ {'backup': False, 'path': [2, 9], 'premium': False},
+ {'backup': False, 'path': [9, 8, 2], 'premium': False},
+ {'backup': False, 'path': [3, 4, 10], 'premium': False},
+ {'backup': False, 'path': [10, 4, 3], 'premium': False},
+ {'backup': False, 'path': [4, 10, 11], 'premium': False},
+ {'backup': False, 'path': [11, 6, 4], 'premium': False},
+ {'backup': False, 'path': [0, 8, 9, 6], 'premium': False},
+ {'backup': False, 'path': [6, 5, 0], 'premium': False},
+ {'backup': False, 'path': [1, 8, 7], 'premium': False},
+ {'backup': False, 'path': [7, 9, 1], 'premium': False},
+ {'backup': False, 'path': [2, 8], 'premium': False},
+ {'backup': False, 'path': [8, 2], 'premium': False},
+ {'backup': False, 'path': [3, 4, 9], 'premium': False},
+ {'backup': False, 'path': [9, 7, 3], 'premium': False},
+ {'backup': False, 'path': [4, 6, 10], 'premium': False},
+ {'backup': False, 'path': [10, 4], 'premium': False},
+ {'backup': False, 'path': [5, 10, 11], 'premium': False},
+ {'backup': False, 'path': [11, 6, 5], 'premium': False},
+ {'backup': False, 'path': [0, 9, 5], 'premium': False},
+ {'backup': False, 'path': [5, 9, 0], 'premium': False},
+ {'backup': False, 'path': [1, 9, 6], 'premium': False},
+ {'backup': False, 'path': [6, 1], 'premium': False},
+ {'backup': False, 'path': [2, 11, 7], 'premium': False},
+ {'backup': False, 'path': [7, 11, 9, 2], 'premium': False},
+ {'backup': False, 'path': [3, 8], 'premium': False},
+ {'backup': False, 'path': [8, 3], 'premium': False},
+ {'backup': False, 'path': [4, 9], 'premium': False},
+ {'backup': False, 'path': [9, 4], 'premium': False},
+ {'backup': False, 'path': [5, 6, 10], 'premium': False},
+ {'backup': False, 'path': [10, 5], 'premium': False},
+ {'backup': False, 'path': [6, 9, 11], 'premium': False},
+ {'backup': False, 'path': [11, 10, 6], 'premium': False},
+ {'backup': False, 'path': [0, 10, 1, 4], 'premium': False},
+ {'backup': False, 'path': [4, 1, 10, 0], 'premium': False},
+ {'backup': False, 'path': [1, 5], 'premium': False},
+ {'backup': False, 'path': [5, 1], 'premium': False},
+ {'backup': False, 'path': [2, 5, 6], 'premium': False},
+ {'backup': False, 'path': [6, 1, 5, 2], 'premium': False},
+ {'backup': False, 'path': [3, 7], 'premium': False},
+ {'backup': False, 'path': [7, 3], 'premium': False},
+ {'backup': False, 'path': [4, 6, 9, 8], 'premium': False},
+ {'backup': False, 'path': [8, 1, 6, 4], 'premium': False},
+ {'backup': False, 'path': [5, 9], 'premium': False},
+ {'backup': False, 'path': [9, 11, 5], 'premium': False},
+ {'backup': False, 'path': [6, 11, 10], 'premium': False},
+ {'backup': False, 'path': [10, 6], 'premium': False},
+ {'backup': False, 'path': [7, 11], 'premium': False},
+ {'backup': False, 'path': [11, 7], 'premium': False},
+ {'backup': False, 'path': [0, 5, 11, 3], 'premium': False},
+ {'backup': False, 'path': [3, 11, 2, 0], 'premium': False},
+ {'backup': False, 'path': [1, 4], 'premium': False},
+ {'backup': False, 'path': [4, 6, 1], 'premium': False},
+ {'backup': False, 'path': [2, 8, 1, 5], 'premium': False},
+ {'backup': False, 'path': [5, 9, 8, 0, 2], 'premium': False},
+ {'backup': False, 'path': [3, 11, 10, 6], 'premium': False},
+ {'backup': False, 'path': [6, 9, 11, 3], 'premium': False},
+ {'backup': False, 'path': [4, 9, 6, 2, 8, 7], 'premium': False},
+ {'backup': False, 'path': [7, 8, 0, 2, 6, 4], 'premium': False},
+ {'backup': False, 'path': [5, 7, 8], 'premium': False},
+ {'backup': False, 'path': [8, 7, 5], 'premium': False},
+ {'backup': False, 'path': [6, 10, 9], 'premium': False},
+ {'backup': False, 'path': [9, 10, 2, 6], 'premium': False},
+ {'backup': False, 'path': [7, 5, 6, 2, 10], 'premium': False},
+ {'backup': False, 'path': [10, 8, 3, 7], 'premium': False},
+ {'backup': False, 'path': [8, 3, 7, 11], 'premium': False},
+ {'backup': False, 'path': [11, 7, 8], 'premium': False},
+ {'backup': False, 'path': [0, 3, 7, 5, 2], 'premium': False},
+ {'backup': False, 'path': [2, 8, 3, 0], 'premium': False},
+ {'backup': False, 'path': [1, 5, 7, 3], 'premium': False},
+ {'backup': False, 'path': [3, 7, 5, 6, 1], 'premium': False},
+ {'backup': False, 'path': [2, 4], 'premium': False},
+ {'backup': False, 'path': [4, 2], 'premium': False},
+ {'backup': False, 'path': [3, 8, 7, 5], 'premium': False},
+ {'backup': False, 'path': [5, 7, 3], 'premium': False},
+ {'backup': False, 'path': [4, 2, 6], 'premium': True},
+ {'backup': True, 'path': [4, 8, 10, 6], 'premium': True},
+ {'backup': False, 'path': [6, 2, 4], 'premium': True},
+ {'backup': True, 'path': [6, 5, 7, 8, 4], 'premium': True},
+ {'backup': False, 'path': [5, 7], 'premium': False},
+ {'backup': False, 'path': [7, 5], 'premium': False},
+ {'backup': False, 'path': [6, 9, 10, 8], 'premium': False},
+ {'backup': False, 'path': [8, 10, 2, 6], 'premium': False},
+ {'backup': False, 'path': [7, 11, 10, 9], 'premium': True},
+ {'backup': True, 'path': [7, 8, 10, 2, 5, 9], 'premium': True},
+ {'backup': False, 'path': [9, 5, 7], 'premium': True},
+ {'backup': True, 'path': [9, 11, 7], 'premium': True},
+ {'backup': False, 'path': [8, 10], 'premium': False},
+ {'backup': False, 'path': [10, 8], 'premium': False},
+ {'backup': False, 'path': [9, 10, 2, 4, 11], 'premium': False},
+ {'backup': False, 'path': [11, 4, 2, 10, 9], 'premium': False},
+ {'backup': False, 'path': [0, 2, 10, 1], 'premium': False},
+ {'backup': False, 'path': [1, 5, 0], 'premium': False},
+ {'backup': False, 'path': [1, 10, 2], 'premium': False},
+ {'backup': False, 'path': [2, 4, 1], 'premium': False},
+ {'backup': False, 'path': [2, 10, 8, 3], 'premium': False},
+ {'backup': False, 'path': [3, 4, 2], 'premium': False},
+ {'backup': False, 'path': [3, 1, 9, 4], 'premium': False},
+ {'backup': False, 'path': [4, 1, 3], 'premium': False},
+ {'backup': False, 'path': [4, 2, 10, 5], 'premium': False},
+ {'backup': False, 'path': [5, 7, 8, 4], 'premium': False},
+ {'backup': False, 'path': [5, 4, 6], 'premium': False},
+ {'backup': False, 'path': [6, 2, 4, 5], 'premium': False},
+ {'backup': False, 'path': [6, 2, 10, 9, 7], 'premium': False},
+ {'backup': False, 'path': [7, 9, 10, 11, 6], 'premium': False},
+ {'backup': False, 'path': [7, 2, 10, 8], 'premium': False},
+ {'backup': False, 'path': [8, 2, 7], 'premium': False},
+ {'backup': False, 'path': [8, 10, 9], 'premium': False},
+ {'backup': False, 'path': [9, 10, 8], 'premium': False},
+ {'backup': False, 'path': [9, 10], 'premium': False},
+ {'backup': False, 'path': [10, 9], 'premium': False},
+ {'backup': False, 'path': [10, 4, 11], 'premium': False},
+ {'backup': False, 'path': [11, 4, 2, 10], 'premium': False}]
+Edges to add:
+[(0, 3, {'capacity_left': 24, 'cost': 7.953521122748089}),
+ (1, 3, {'capacity_left': 26, 'cost': 4.090777982242497}),
+ (2, 6, {'capacity_left': 8, 'cost': 3.3867405052646107}),
+ (2, 10, {'capacity_left': 6, 'cost': 7.276914352938338}),
+ (2, 4, {'capacity_left': 12, 'cost': 6.77791717638981}),
+ (2, 7, {'capacity_left': 26, 'cost': 9.209750390211456}),
+ (3, 0, {'capacity_left': 24, 'cost': 7.953521122748089}),
+ (3, 1, {'capacity_left': 26, 'cost': 4.090777982242497}),
+ (4, 2, {'capacity_left': 10, 'cost': 6.77791717638981}),
+ (4, 8, {'capacity_left': 24, 'cost': 8.017461007076992}),
+ (4, 11, {'capacity_left': 22, 'cost': 12.432814182637816}),
+ (4, 5, {'capacity_left': 26, 'cost': 11.103497512045472}),
+ (5, 7, {'capacity_left': 0, 'cost': 14.284428760016974}),
+ (5, 4, {'capacity_left': 26, 'cost': 11.103497512045472}),
+ (6, 2, {'capacity_left': 8, 'cost': 3.3867405052646107}),
+ (7, 5, {'capacity_left': 0, 'cost': 14.284428760016974}),
+ (7, 2, {'capacity_left': 26, 'cost': 9.209750390211456}),
+ (8, 10, {'capacity_left': 10, 'cost': 3.5021807848824684}),
+ (8, 4, {'capacity_left': 22, 'cost': 8.017461007076992}),
+ (10, 2, {'capacity_left': 8, 'cost': 7.276914352938338}),
+ (10, 8, {'capacity_left': 8, 'cost': 3.5021807848824684}),
+ (11, 4, {'capacity_left': 22, 'cost': 12.432814182637816})]
+Total cost:
+176.07200755290907

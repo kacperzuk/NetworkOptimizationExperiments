@@ -7,7 +7,7 @@ import json
 
 BACKUP_DEMANDS = 4
 SEED = 1337
-LINK_CAP = 20 # Gbit/s
+
 
 backup_demands = list()
 
@@ -92,13 +92,14 @@ def save_to_heuristic(filename, G):
 
 if __name__ == "__main__":
     if len(sys.argv) < 4:
-        print("Usage: generate_network.py nodes_number edges_number output_file")
+        print("Usage: generate_network.py nodes_number edges_number link_capacity output_file")
         print("Creates file in network_cplex_model/network/data/<output_file>.dat")
         sys.exit(2)
 
     nodes_number = int(sys.argv[1])
     edges_number = int(sys.argv[2])
-    filename = sys.argv[3]
+    LINK_CAP = int(sys.argv[3])
+    filename = sys.argv[4]
 
     G = nx.gnm_random_graph(nodes_number, edges_number, SEED)
     #G = nx.newman_watts_strogatz_graph(10, 3, 0.2, SEED)
