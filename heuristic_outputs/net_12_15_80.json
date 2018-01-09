@@ -141,23 +141,23 @@ Tunnels
  {'backup': False, 'path': [10, 11], 'premium': False},
  {'backup': False, 'path': [11, 10], 'premium': False}]
 Edges to add:
-[(0, 2, {'capacity_left': 0, 'cost': 4.444001181367979}),
- (0, 11, {'capacity_left': 48, 'cost': 10.240808378736514}),
- (2, 0, {'capacity_left': 0, 'cost': 4.444001181367979}),
- (2, 8, {'capacity_left': 0, 'cost': 9.308593717635334}),
- (3, 7, {'capacity_left': 42, 'cost': 14.967253271726245}),
- (3, 9, {'capacity_left': 66, 'cost': 4.13114188209507}),
- (5, 7, {'capacity_left': 0, 'cost': 2.4995388574695134}),
- (5, 8, {'capacity_left': 0, 'cost': 2.7720350827505795}),
- (6, 9, {'capacity_left': 28, 'cost': 5.986760246577443}),
- (7, 5, {'capacity_left': 0, 'cost': 2.4995388574695134}),
- (7, 3, {'capacity_left': 42, 'cost': 14.967253271726245}),
- (7, 8, {'capacity_left': 18, 'cost': 3.9194604220479143}),
- (8, 2, {'capacity_left': 0, 'cost': 9.308593717635334}),
- (8, 5, {'capacity_left': 0, 'cost': 2.7720350827505795}),
- (8, 7, {'capacity_left': 18, 'cost': 3.9194604220479143}),
- (9, 6, {'capacity_left': 28, 'cost': 5.986760246577443}),
- (9, 3, {'capacity_left': 66, 'cost': 4.13114188209507}),
- (11, 0, {'capacity_left': 48, 'cost': 10.240808378736514})]
+[(0, 2, {'capacity_left': 0, 'cost': 39}),
+ (0, 11, {'capacity_left': 48, 'cost': 209}),
+ (2, 0, {'capacity_left': 0, 'cost': 39}),
+ (2, 8, {'capacity_left': 0, 'cost': 173}),
+ (3, 7, {'capacity_left': 42, 'cost': 448}),
+ (3, 9, {'capacity_left': 66, 'cost': 34}),
+ (5, 7, {'capacity_left': 0, 'cost': 12}),
+ (5, 8, {'capacity_left': 0, 'cost': 15}),
+ (6, 9, {'capacity_left': 28, 'cost': 71}),
+ (7, 5, {'capacity_left': 0, 'cost': 12}),
+ (7, 3, {'capacity_left': 42, 'cost': 448}),
+ (7, 8, {'capacity_left': 18, 'cost': 30}),
+ (8, 2, {'capacity_left': 0, 'cost': 173}),
+ (8, 5, {'capacity_left': 0, 'cost': 15}),
+ (8, 7, {'capacity_left': 18, 'cost': 30}),
+ (9, 6, {'capacity_left': 28, 'cost': 71}),
+ (9, 3, {'capacity_left': 66, 'cost': 34}),
+ (11, 0, {'capacity_left': 48, 'cost': 209})]
 Total cost:
-116.53918608081321
+2062

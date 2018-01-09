@@ -99,11 +99,11 @@ Tunnels
  {'backup': False, 'path': [8, 9], 'premium': False},
  {'backup': False, 'path': [9, 8], 'premium': False}]
 Edges to add:
-[(0, 8, {'capacity_left': 62, 'cost': 8.00254842222151}),
- (2, 5, {'capacity_left': 92, 'cost': 7.061738189001346}),
- (5, 2, {'capacity_left': 88, 'cost': 7.061738189001346}),
- (7, 8, {'capacity_left': 74, 'cost': 0.7155616675032296}),
- (8, 0, {'capacity_left': 72, 'cost': 8.00254842222151}),
- (8, 7, {'capacity_left': 72, 'cost': 0.7155616675032296})]
+[(0, 8, {'capacity_left': 62, 'cost': 128}),
+ (2, 5, {'capacity_left': 92, 'cost': 99}),
+ (5, 2, {'capacity_left': 88, 'cost': 99}),
+ (7, 8, {'capacity_left': 74, 'cost': 1}),
+ (8, 0, {'capacity_left': 72, 'cost': 128}),
+ (8, 7, {'capacity_left': 72, 'cost': 1})]
 Total cost:
-31.55969655745217
+456
