@@ -139,7 +139,7 @@ Tunnels
  {'backup': False, 'path': [10, 11], 'premium': False},
  {'backup': False, 'path': [11, 10], 'premium': False}]
 Edges to add:
-[(4, 7, {'capacity_left': 46, 'cost': 3.9190499167527815}),
- (7, 4, {'capacity_left': 46, 'cost': 3.9190499167527815})]
+[(4, 7, {'capacity_left': 46, 'cost': 30}),
+ (7, 4, {'capacity_left': 46, 'cost': 30})]
 Total cost:
-7.838099833505563
+60

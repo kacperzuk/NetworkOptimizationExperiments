@@ -65,17 +65,17 @@ Tunnels
  {'backup': False, 'path': [6, 7], 'premium': False},
  {'backup': False, 'path': [7, 6], 'premium': False}]
 Edges to add:
-[(1, 6, {'capacity_left': 34, 'cost': 9.373382793847695}),
- (1, 4, {'capacity_left': 32, 'cost': 7.129482887980023}),
- (2, 6, {'capacity_left': 34, 'cost': 9.063468941304981}),
- (4, 1, {'capacity_left': 36, 'cost': 7.129482887980023}),
- (4, 6, {'capacity_left': 36, 'cost': 15.12976375393879}),
- (5, 7, {'capacity_left': 36, 'cost': 12.767217365189644}),
- (6, 1, {'capacity_left': 32, 'cost': 9.373382793847695}),
- (6, 7, {'capacity_left': 32, 'cost': 5.558439641662037}),
- (6, 4, {'capacity_left': 36, 'cost': 15.12976375393879}),
- (6, 2, {'capacity_left': 36, 'cost': 9.063468941304981}),
- (7, 6, {'capacity_left': 30, 'cost': 5.558439641662037}),
- (7, 5, {'capacity_left': 34, 'cost': 12.767217365189644})]
+[(1, 6, {'capacity_left': 34, 'cost': 175}),
+ (1, 4, {'capacity_left': 32, 'cost': 101}),
+ (2, 6, {'capacity_left': 34, 'cost': 164}),
+ (4, 1, {'capacity_left': 36, 'cost': 101}),
+ (4, 6, {'capacity_left': 36, 'cost': 457}),
+ (5, 7, {'capacity_left': 36, 'cost': 326}),
+ (6, 1, {'capacity_left': 32, 'cost': 175}),
+ (6, 7, {'capacity_left': 32, 'cost': 61}),
+ (6, 4, {'capacity_left': 36, 'cost': 457}),
+ (6, 2, {'capacity_left': 36, 'cost': 164}),
+ (7, 6, {'capacity_left': 30, 'cost': 61}),
+ (7, 5, {'capacity_left': 34, 'cost': 326})]
 Total cost:
-118.04351076784633
+2568

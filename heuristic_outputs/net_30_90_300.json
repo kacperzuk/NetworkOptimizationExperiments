@@ -879,13 +879,13 @@ Tunnels
  {'backup': False, 'path': [28, 29], 'premium': False},
  {'backup': False, 'path': [29, 28], 'premium': False}]
 Edges to add:
-[(0, 7, {'capacity_left': 214, 'cost': 1.6509936402057999}),
- (2, 27, {'capacity_left': 300, 'cost': 3.334922975122512}),
- (6, 21, {'capacity_left': 218, 'cost': 3.42373188202581}),
- (7, 0, {'capacity_left': 212, 'cost': 1.6509936402057999}),
- (12, 27, {'capacity_left': 142, 'cost': 2.9834343046227785}),
- (21, 6, {'capacity_left': 218, 'cost': 3.42373188202581}),
- (27, 12, {'capacity_left': 150, 'cost': 2.9834343046227785}),
- (27, 2, {'capacity_left': 298, 'cost': 3.334922975122512})]
+[(0, 7, {'capacity_left': 214, 'cost': 5}),
+ (2, 27, {'capacity_left': 300, 'cost': 22}),
+ (6, 21, {'capacity_left': 218, 'cost': 23}),
+ (7, 0, {'capacity_left': 212, 'cost': 5}),
+ (12, 27, {'capacity_left': 142, 'cost': 17}),
+ (21, 6, {'capacity_left': 218, 'cost': 23}),
+ (27, 12, {'capacity_left': 150, 'cost': 17}),
+ (27, 2, {'capacity_left': 298, 'cost': 22})]
 Total cost:
-22.7861656039538
+134
